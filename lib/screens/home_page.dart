@@ -1,5 +1,10 @@
+
+import 'package:anubhavcaterespvt/models/carousel_option.dart';
 import 'package:anubhavcaterespvt/models/model.dart';
 import 'package:anubhavcaterespvt/widgets/hero_carousel.dart';
+import 'package:anubhavcaterespvt/widgets/product_card.dart';
+import 'package:anubhavcaterespvt/widgets/product_carousel.dart';
+import 'package:anubhavcaterespvt/widgets/section_title.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.black,
+     // backgroundColor: Colors.black,
 
       appBar: AppBar(
             backgroundColor: Colors.black,
@@ -30,22 +35,43 @@ class _HomePageState extends State<HomePage> {
        // ------------------------------------
        // -----
 
-          child: CarouselSlider(
-            options: CarouselOptions(
-              aspectRatio: 1.5,
-              viewportFraction: 0.9,
-              enlargeCenterPage: true,
-              enlargeStrategy: CenterPageEnlargeStrategy.height,
+          child: Column(
+            children: [
+              CarouselSlider(
+                options: CarouselOptions(
+                  aspectRatio: 1.5,
+                  viewportFraction: 0.9,
+                  enlargeCenterPage: true,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
 
 
 
 
-            ),
-            items: Category.categories.map((category) =>
-                HeroCarouselCard(category: category)).toList(),
+                ),
+                items: Category.categories.map((category) =>
+                    HeroCarouselCard(category: category)).toList(),
+              ),
+              const SectionTitle(title: 'RECOMMENDED'),
+
+               ProductCarousel(products : Product.products
+                   .where((product) => product.isRecommended).toList()),
+
+             // const SectionTitle(title: 'MOST POPULAR'),
+
+             // ProductCarousel(products : Product.products
+              //    .where((product) => product.isPopular).toList()),
+
+
+
+            ],
           )
       ),
     );
   }
 }
+
+
+
+
+
 
