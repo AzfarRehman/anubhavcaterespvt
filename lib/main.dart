@@ -1,5 +1,6 @@
 
 import 'package:anubhavcaterespvt/screens/bottomapp_bar.dart';
+import 'package:anubhavcaterespvt/screens/home_page.dart';
 import 'package:anubhavcaterespvt/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           primaryColorDark: Colors.black
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const BottomBar(),
     );
   }
 }
