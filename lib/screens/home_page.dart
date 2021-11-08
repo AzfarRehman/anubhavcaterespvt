@@ -43,6 +43,7 @@ class _HomePageState extends State<HomePage> {
                   viewportFraction: 0.9,
                   enlargeCenterPage: true,
                   enlargeStrategy: CenterPageEnlargeStrategy.height,
+                  autoPlay: true
 
 
 
@@ -54,11 +55,11 @@ class _HomePageState extends State<HomePage> {
               const SectionTitle(title: 'RECOMMENDED'),
 
                ProductCarousel(products : Product.products
-                   .where((product) => product.isRecommended).toList()),
+                  .where((product) => product.isRecommended).toList()),
 
-             // const SectionTitle(title: 'MOST POPULAR'),
+           //   const SectionTitle(title: 'MOST POPULAR'),
 
-             // ProductCarousel(products : Product.products
+            //  ProductCarousel(products : Product.products
               //    .where((product) => product.isPopular).toList()),
 
 

@@ -7,7 +7,11 @@ class CatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+   //  final List<Product> categoryProducts = Product.products.where((product) => product.category == ).toList();
+
+
     return Scaffold(
+     // backgroundColor: Colors.black,
       appBar: AppBar(
       backgroundColor: Colors.black,
       elevation: 0,
@@ -20,10 +24,12 @@ class CatalogScreen extends StatelessWidget {
           itemBuilder: (BuildContext context, int index)
           {
             return Center(
-                child: ProductCard(product: Product.products[0],
+                child: ProductCard(
+                  product: Product.products[index],
                   widthFactor: 2.2,
-                )
-            );
+                ),
+                );
+
           }
       )
 

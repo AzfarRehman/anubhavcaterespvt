@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ProductCard extends StatelessWidget {
   final Product product;
   final double widthFactor;
+
   const ProductCard({
 
     Key? key,

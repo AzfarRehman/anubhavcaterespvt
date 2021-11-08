@@ -61,7 +61,7 @@ class Product extends Equatable{
     ),
     const Product(
       name:'Love #1',
-      category: 'Smoothies',
+      category: 'Love',
       imageUrl: 'https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2074&q=80',
       price: 2.99,
       isPopular: false,
@@ -70,7 +70,7 @@ class Product extends Equatable{
     ),
     const Product(
       name:'Love #2',
-      category: 'Smoothies',
+      category: 'Love',
       imageUrl: 'https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2074&q=80',
       price: 2.99,
       isPopular: false,
