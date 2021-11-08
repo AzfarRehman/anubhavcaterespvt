@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:anubhavcaterespvt/config/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:anubhavcaterespvt/theme/app_colors.dart';
@@ -29,58 +30,64 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          children: [
+      body: Container(
+
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Center(
+          child: Column(
+            children: [
 
 
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 260),
-              child: AnimatedBuilder(
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 170),
+                child: AnimatedBuilder(
 
-                animation: _controller,
-                builder: (_, child) {
-                  return Transform.rotate(
-                    angle: _controller.value * 2 * pi,
+                  animation: _controller,
+                  builder: (_, child) {
+                    return Transform.rotate(
+                      angle: _controller.value * 2 * pi,
 
-                    child: child,
-                  );
-                },
-                child: Image.asset("assets/images/logo.png" ,width: 180,),
+                      child: child,
+                    );
+                  },
+                  child: Image.asset("assets/images/logo.png" ,width: 180,),
+                ),
               ),
-            ),
-            const SizedBox(height: 15,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 65),
-              child: Column(
+              const SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 65),
+                child: Column(
 
-                children: [
-                  const Text("ANUBHAV CATERERS PVT.LTD", style: TextStyle(
-                    color: Colors.amber,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ),),
-                  const SizedBox(height: 9,),
-                  LinearProgressIndicator(
-                    value: _controller.value,
-                    backgroundColor: Colors.white10,
-                    semanticsLabel: 'Linear progress indicator',color: Colors.amber,
-                  ),
-                  const SizedBox(height: 8,),
-                  const Text("EVENTS,CATERERS,LIFT,INSURANCE,TILE", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 11,
-                    fontWeight: FontWeight.bold,
-                  ),),
-                ],
+                  children: [
+                    const Text("ANUBHAV CATERERS PVT.LTD", style: TextStyle(
+                      color: Colors.amber,
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                    const SizedBox(height: 9,),
+                    LinearProgressIndicator(
+                      value: _controller.value,
+                      backgroundColor: Colors.white10,
+                      semanticsLabel: 'Linear progress indicator',color: Colors.amber,
+                    ),
+                    const SizedBox(height: 8,),
+                    const Text("EVENTS,CATERERS,LIFT,INSURANCE,TILE", style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ],
+                ),
               ),
-            ),
 
 
 
-          ],
+            ],
+          ),
         ),
       ),
     );

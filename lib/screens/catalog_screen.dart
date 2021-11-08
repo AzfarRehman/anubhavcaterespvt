@@ -11,7 +11,7 @@ class CatalogScreen extends StatelessWidget {
 
 
     return Scaffold(
-     // backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       appBar: AppBar(
       backgroundColor: Colors.black,
       elevation: 0,

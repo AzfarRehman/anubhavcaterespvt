@@ -1,4 +1,5 @@
 import 'package:anubhavcaterespvt/screens/catalog_screen.dart';
+import 'package:anubhavcaterespvt/screens/plate.dart';
 import 'package:flutter/material.dart';
 import 'package:anubhavcaterespvt/theme/app_colors.dart';
 import 'package:anubhavcaterespvt/config/size_config.dart';
@@ -27,7 +28,7 @@ class _BottomBarState extends State<BottomBar> {
   final tabs = [
     const HomePage(),
     const CatalogScreen(),
-    const Center(child: PrimaryText(text: 'Profile Page', size: 40, color: AppColors.primary)),
+    const PlateScreen(),
     const Center(child: PrimaryText(text: 'Cart detail Page', size: 40, color: AppColors.primary)),
   ];
 

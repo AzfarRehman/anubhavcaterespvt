@@ -21,9 +21,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-     // backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
 
       appBar: AppBar(
+
             backgroundColor: Colors.black,
             elevation: 0,
       ),
@@ -31,26 +32,43 @@ class _HomePageState extends State<HomePage> {
 
       body: Container(
 
-          //Border------------------------------------------------
-       // ------------------------------------
-       // -----
+
+
 
           child: Column(
             children: [
-              CarouselSlider(
-                options: CarouselOptions(
-                  aspectRatio: 1.5,
-                  viewportFraction: 0.9,
-                  enlargeCenterPage: true,
-                  enlargeStrategy: CenterPageEnlargeStrategy.height,
-                  autoPlay: true
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  //decoration: BoxDecoration(
+                    //  border: Border.all(color: Colors.amberAccent, width: 5),
+                   //   borderRadius: const BorderRadius.all(
+                     //    Radius.circular(20.0)),
+                     // boxShadow: const [BoxShadow(blurRadius: 5,color: Colors.black,offset: Offset(1,1))]
+                    //  //Border------------------------------------------------
+                    //        // ------------------------------------
+                    //        // -----
+                    // Make rounded corner of border
+               //   ),
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      aspectRatio: 1.5,
+                      viewportFraction: 0.9,
+                      enlargeCenterPage: true,
+                     enableInfiniteScroll: true,
+
+
+                    //  enlargeStrategy: CenterPageEnlargeStrategy.height, //Reduce space between card
+                      autoPlay: true
 
 
 
 
+                    ),
+                    items: Category.categories.map((category) =>
+                        HeroCarouselCard(category: category)).toList(),
+                  ),
                 ),
-                items: Category.categories.map((category) =>
-                    HeroCarouselCard(category: category)).toList(),
               ),
               const SectionTitle(title: 'RECOMMENDED'),
 

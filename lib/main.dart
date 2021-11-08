@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           primaryColorDark: Colors.black
       ),
       debugShowCheckedModeBanner: false,
-      home: const PhoneAuthPage(),
+      home: const BottomBar(),
     );
   }
 }
