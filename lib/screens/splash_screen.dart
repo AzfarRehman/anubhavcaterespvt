@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'dart:math';
 import 'package:anubhavcaterespvt/config/size_config.dart';
+import 'package:anubhavcaterespvt/screens/otp.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:anubhavcaterespvt/theme/app_colors.dart';
@@ -30,6 +32,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+    Timer(const Duration(seconds: 3), () =>
+        Navigator.push(context, MaterialPageRoute(builder: (builder) => const PhoneAuthPage())));
 
     return Scaffold(
       backgroundColor: Colors.black,

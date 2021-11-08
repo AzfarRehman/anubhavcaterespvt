@@ -1,6 +1,7 @@
 import 'dart:async';
 
 //import 'package:firebase_app_web/Service/Auth_Service.dart';
+import 'package:anubhavcaterespvt/screens/bottomapp_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
@@ -26,6 +27,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
     return Scaffold(
       backgroundColor: Colors.black87,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.black87,
         title: const Text(
           "SignUp",
@@ -100,6 +102,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
               ),
               InkWell(
                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (builder) => const BottomBar()));
                   //authClass.signInwithPhoneNumber(
                      // verificationIdFinal, smsCode, context);
                 },
