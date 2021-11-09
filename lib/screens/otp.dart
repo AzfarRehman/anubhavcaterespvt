@@ -1,7 +1,6 @@
 import 'dart:async';
-
-//import 'package:firebase_app_web/Service/Auth_Service.dart';
 import 'package:anubhavcaterespvt/screens/bottomapp_bar.dart';
+import 'package:anubhavcaterespvt/service/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
@@ -19,7 +18,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
   bool wait = false;
   String buttonName = "Send";
   TextEditingController phoneController = TextEditingController();
-  //AuthClass authClass = AuthClass();
+  AuthClass authClass = AuthClass();
   String verificationIdFinal = "";
   String smsCode = "";
   @override
@@ -98,13 +97,13 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
                     ],
                   )),
               const SizedBox(
-                height: 150,
+                height: 120,
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (builder) => const BottomBar()));
-                  //authClass.signInwithPhoneNumber(
-                     // verificationIdFinal, smsCode, context);
+
+                  authClass.signInwithPhoneNumber(
+                      verificationIdFinal, smsCode, context);
                 },
                 child: Container(
                   height: 60,
@@ -188,7 +187,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
           prefixIcon: const Padding(
             padding:  EdgeInsets.symmetric(vertical: 14, horizontal: 15),
             child: Text(
-              " (+91) ",
+              " (+92) ",
               style: TextStyle(color: Colors.white, fontSize: 17),
             ),
           ),
@@ -201,8 +200,8 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
                 wait = true;
                 buttonName = "Resend";
               });
-              //await authClass.verifyPhoneNumber(
-                //  "+91 ${phoneController.text}", context, setData);
+              await authClass.verifyPhoneNumber(
+                  "+92 ${phoneController.text}", context, setData);
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
