@@ -30,7 +30,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
         backgroundColor: Colors.black87,
         title: const Text(
           "SignUp",
-          style: TextStyle(color: Colors.white, fontSize: 24),
+          style: TextStyle(color: Colors.yellowAccent, fontSize: 24),
         ),
         centerTitle: true,
       ),
